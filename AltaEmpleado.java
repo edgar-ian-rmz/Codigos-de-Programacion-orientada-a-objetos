@@ -63,6 +63,8 @@ public class AltaEmpleado extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -303,6 +305,16 @@ public class AltaEmpleado extends javax.swing.JFrame {
 
         jButton4.setText(">>");
 
+        jButton5.setText("Nuevo Registro");
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton5MouseClicked(evt);
+            }
+        });
+
+        jButton6.setText("Enviar");
+        jButton6.setEnabled(false);
+
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -312,27 +324,33 @@ public class AltaEmpleado extends javax.swing.JFrame {
                 .add(jTabbedPane1))
             .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .add(jButton5)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                .add(jButton6)
+                .add(99, 99, 99)
                 .add(jButton3)
                 .add(18, 18, 18)
                 .add(jButton4)
                 .add(141, 141, 141)
                 .add(jButton2)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(jButton1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 69, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .add(6, 6, 6))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(layout.createSequentialGroup()
                 .addContainerGap()
                 .add(jTabbedPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 475, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                .add(37, 37, 37)
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jButton1)
                     .add(jButton2)
+                    .add(jButton1)
+                    .add(jButton4)
                     .add(jButton3)
-                    .add(jButton4))
-                .addContainerGap(84, Short.MAX_VALUE))
+                    .add(jButton6)
+                    .add(jButton5))
+                .addContainerGap(57, Short.MAX_VALUE))
         );
 
         pack();
@@ -346,6 +364,39 @@ public class AltaEmpleado extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField3ActionPerformed
 
+    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+        // TODO add your handling code here:
+         System.out.println("Nuevo Empleado!!!");
+         this.limpiarFomulario();
+         
+         Empleado emp= new Empleado();
+         emp.setNombre( this.jTextField1.getText() );
+         emp.setAppaterno( this.jTextField2.getText() );
+         emp.setApmaterno( jTextField3.getText() );
+         emp.setEdad( Integer.parseInt ( jTextField4.getText()) );
+         emp.setCurp ( jTextField5.getText());
+         
+                
+         
+    }//GEN-LAST:event_jButton5MouseClicked
+private void limpiarFormulario(){
+      this.jTextField1.setText("");
+      this.jTextField2.setText("");
+      this.jTextField3.setText("");
+      this.jTextField4.setText("");
+      this.jTextField5.setText("");
+      this.jTextField6.setText("");
+      this.jTextField7.setText("");
+      this.jTextField8.setText("");
+      this.jTextField9.setText("");
+      this.jTextField10.setText("");
+      this.jTextField10.setColumns(10);
+      this.jTextField11.setText("");
+      this.jTextField11.setColumns(10);
+      this.jTextField12.setText("");
+      this.jTextField13.setText("");
+      this.jTextField14.setText("");
+    }
     /**
      * @param args the command line arguments
      */
@@ -386,6 +437,8 @@ public class AltaEmpleado extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
